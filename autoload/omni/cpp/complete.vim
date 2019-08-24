@@ -34,11 +34,11 @@ let s:bMayComplete = 0
 " Init mappings
 function! omni#cpp#complete#Init()
     call omni#cpp#settings#Init()
-    set omnifunc=omni#cpp#complete#Main
-    inoremap <expr> <C-X><C-O> omni#cpp#maycomplete#Complete()
-    inoremap <expr> . omni#cpp#maycomplete#Dot()
-    inoremap <expr> > omni#cpp#maycomplete#Arrow()
-    inoremap <expr> : omni#cpp#maycomplete#Scope()
+    " set omnifunc=omni#cpp#complete#Main
+    " inoremap <expr> <C-X><C-O> omni#cpp#maycomplete#Complete()
+    " inoremap <expr> . omni#cpp#maycomplete#Dot()
+    " inoremap <expr> > omni#cpp#maycomplete#Arrow()
+    " inoremap <expr> : omni#cpp#maycomplete#Scope()
 endfunc
 
 " Find the start position of the completion
@@ -161,11 +161,11 @@ function! s:ExtendTagItemToPopupItem(tagItem, szTypeName)
 
     " Formating information for the preview window
     if index(['f', 'p'], tagItem.kind[0])>=0
-        let szItemWord .= '('
+        " let szItemWord .= '('
         if g:OmniCpp_ShowPrototypeInAbbr && has_key(tagItem, 'signature')
             let szAbbr .= tagItem.signature
-        else
-            let szAbbr .= '('
+        " else
+            " let szAbbr .= '('
         endif
     endif
     let szItemInfo = ''
