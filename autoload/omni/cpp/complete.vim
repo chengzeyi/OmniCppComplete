@@ -164,7 +164,7 @@ function! s:ExtendTagItemToPopupItem(tagItem, szTypeName)
         " let szItemWord .= '('
         if g:OmniCpp_ShowPrototypeInAbbr && has_key(tagItem, 'signature')
             let szAbbr .= tagItem.signature
-        " else
+        else
             let szAbbr .= '(...)'
         endif
     endif
