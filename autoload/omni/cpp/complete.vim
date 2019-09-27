@@ -161,7 +161,7 @@ function! s:ExtendTagItemToPopupItem(tagItem, szTypeName)
 
     " Formating information for the preview window
     if index(['f', 'p'], tagItem.kind[0])>=0
-        if g:OmniCpp_AddParen
+        if g:OmniCpp_AddLeftParen
             let szItemWord .= '('
         endif
         if g:OmniCpp_ShowPrototypeInAbbr && has_key(tagItem, 'signature')
